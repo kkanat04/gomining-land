@@ -1,0 +1,239 @@
+.footer {
+  margin-top: 45px;
+  width: 100%;
+  background-color: #090A18;
+}
+
+.container {
+  padding: 55px 0;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  > div:first-of-type {
+    display: flex;
+  }
+
+  > div:last-of-type {
+    > p {
+      font-family: 'AtypDisplay-Medium', serif;
+      font-size: var(--fz-title2);
+      text-align: right;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    > div {
+      margin-top: 22px;
+      display: flex;
+      align-items: center;
+
+      p {
+        cursor: pointer;
+      }
+
+      p:hover {
+        color: #9747FF;
+      }
+
+      > p {
+        border-left: 1px solid #2D2D42;
+        font-family: 'Atyp-Text-Medium', serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 0 12px 0;
+
+        &:first-of-type {
+          padding-left: 0;
+          border: none;
+        }
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.first {
+  padding-right: 40px;
+  width: max-content;
+  display: flex;
+  border-right: 1px solid #2D2D42;
+  gap: 40px;
+
+  p {
+    cursor: pointer;
+  }
+
+  p:hover {
+    color: #9747FF;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    > p {
+      color: #fff;
+      font-family: 'Atyp-Text-Medium', serif;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}
+
+.second {
+  padding-left: 40px;
+  width: max-content;
+  display: flex;
+  gap: 40px;
+
+  p {
+    cursor: pointer;
+  }
+
+  p:hover {
+    color: #9747FF;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    > p {
+      color: #fff;
+      font-family: 'Atyp-Text-Medium', serif;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .container {
+    flex-direction: column;
+    padding-bottom: 24px;
+
+    > div:first-of-type {
+      padding-bottom: 20px;
+      flex-direction: column;
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    > div:last-of-type {
+      border-top: 1px solid rgba(153, 153, 173, 0.2);
+      padding-top: 24px;
+
+      > div {
+        p {
+          font-size: 20px;
+        }
+      }
+
+      > p {
+        text-align: left;
+      }
+    }
+
+    .first {
+      justify-content: center;
+      width: 100%;
+      gap: 14px;
+      border-right: none;
+      padding-right: 0;
+      border-bottom: 1px solid rgba(153, 153, 173, 0.2);
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+
+      > div {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+      }
+
+      flex-wrap: wrap;
+    }
+
+    .second {
+      width: 100%;
+      justify-content: center;
+      padding-left: 0;
+
+      > div {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .first {
+    flex-direction: column-reverse;
+
+    > div {
+      > p {
+        width: 130px;
+
+        > svg {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .container > div:last-of-type > div {
+    grid-template-columns: 1fr !important;
+
+    > p {
+      border: none !important;
+      margin: 0 !important;
+      padding: 0 0 10px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 592px) {
+  .container > div:last-of-type > div {
+    display: grid;
+    grid-template-columns: max-content max-content;
+
+    > p {
+      padding: 0;
+      border: none;
+      margin-bottom: 16px;
+
+      &:first-of-type {
+        border-right: 1px solid #2D2D42;
+        padding-right: 10px;
+        margin-right: 10px;
+      }
+
+      &:nth-child(3) {
+        border-right: 1px solid #2D2D42;
+        padding-right: 10px;
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}

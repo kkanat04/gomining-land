@@ -1,0 +1,46 @@
+.btcSupport {
+  width: 90%;
+  margin: 140px auto 0;
+  display: flex;
+  > div {
+    > p {
+      font-size: var(--fz-title);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      font-family: 'AtypDisplay-Medium', serif;
+      line-height: 100%;
+      color: #090A18;
+      > span {
+        background: linear-gradient(90.07deg, #EA6788 -0.91%, #853FFD 46.01%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+    > div {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      > div {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        font-size: 20px;
+        color: #2D2D42;
+        font-family: 'Atyp-Text-Medium', serif;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .btcSupport {
+    flex-direction: column;
+    align-items: center;
+    > img {
+      max-width: 100%;
+    }
+  }
+}

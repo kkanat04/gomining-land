@@ -1,0 +1,48 @@
+.selectMining {
+  width: 100%;
+  margin: 160px auto 0;
+  overflow: hidden;
+
+  > div {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    > p:first-of-type {
+      font-family: 'AtypDisplay-Medium', serif;
+      font-size: var(--fz-title);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #090A18;
+      margin-bottom: 48px;
+    }
+
+    > p:last-of-type {
+      font-family: 'Atyp-Text-Medium', serif;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      color: #090A18;
+      border-bottom: 2px solid #7540EF;
+    }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .selectMining {
+    > div {
+      flex-direction: column;
+
+      > p:first-of-type {
+        margin-bottom: 20px;
+      }
+
+      > p:last-of-type {
+        margin-bottom: 48px;
+      }
+    }
+  }
+}

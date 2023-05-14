@@ -1,0 +1,73 @@
+.cryptoArt {
+  width: 100%;
+}
+
+.col {
+  width: 90%;
+  position: relative;
+  margin: 140px auto 0;
+  background-color: #090A18;
+  border-radius: 24px;
+  padding: 112px 84px;
+  display: flex;
+  > img {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    border-bottom-right-radius: 24px;
+  }
+}
+
+.title {
+  z-index: 2;
+  font-family: 'AtypDisplay-Medium', serif;
+  font-weight: 400;
+  line-height: 120%;
+  font-size: var(--fz-title2);
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1350px) {
+  .cryptoArt {
+    background-color: #090A18;
+    overflow: hidden;
+    margin-top: 140px;
+  }
+  .col {
+    width: 90%;
+    margin: 0 auto;
+    padding: 70px 0;
+    border-radius: 0;
+    position: relative;
+    > img {
+      width: 45%;
+      margin: 0 auto;
+      position: absolute;
+      right: -10%;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .col {
+    > img {
+      width: 50%;
+      right: -10%;
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .col {
+    > img {
+      display: none;
+    }
+  }
+  .title {
+    > br {
+      display: none;
+    }
+  }
+}

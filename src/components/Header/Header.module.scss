@@ -1,0 +1,39 @@
+.header {
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20px 0;
+  transition: 0.5s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99999;
+  > div {
+    width: 90%;
+    margin: 0 auto;
+    height: 32px;
+    position: relative;
+    > img {
+      opacity: 0;
+      transition: 0.5s;
+      position: absolute;
+    }
+  }
+}
+
+.visible {
+  opacity: 1 !important;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    > button {
+      display: none;
+    }
+  }
+}
+
+.header_black {
+  background-color: #090A18;
+}
